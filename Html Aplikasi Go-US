@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Achsin Gojek Lama</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-rounded/css/uicons-regular-rounded.css'>
+<link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-regular-straight/css/uicons-regular-straight.css'>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet"> 
+<style>
+@import url('https://fonts.googleapis.com/css?family=Lato');
+:root {
+  --AchsinulUmamB1:#FFFFFF;
+  --AchsinulUmamB2:#00880d;
+  --AchsinulUmamB3:#FFFACD;
+  --gradient1: linear-gradient(to right top,#D1F7EC,#E9FBF5);
+  --gradient2: linear-gradient(to right top,#FCD9E0,#FDEFF2);
+  --gradient3: linear-gradient(to right top,#E4DBF7,#F3EEFB); 
+  --gradient4: linear-gradient(to right top,#DEF5FC,#EFF9FC);
+  --gradient5: linear-gradient(to right top,#00880D,#18A926,#3CC449,#65EA72);
+  --AchsinulUmamC1:#006400;
+  --AchsinulUmamC2:#EE2737;
+  --AchsinulUmamC3:#93328E;
+  --AchsinulUmamC4:#00AED6;
+}
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: var(--AchsinulUmamB1);
+	font-family: 'Lato', sans-serif;
+width:100%;
+}
+
+h2 {
+	color: #fff;
+	position: absolute;
+	top: 0px;
+}
+.tab-nav-container {
+    background-color: var(--AchsinulUmamB2);
+    border-top-right-radius: 30px;
+    border-top-left-radius: 30px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    display: flex;
+    justify-content: space-between;
+    padding: 0px;
+
+    min-width: 100%;
+height:9%;
+    bottom: 0%;
+    position:fixed;
+left:0px;
+}
+.tab {
+    background-color: var(--AchsinulUmamB3);
+    border-radius: 50px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px;
+    margin: 0 0px;
+    transition: background 0.4s linear;
+}
+.tab i {
+    font-size: 0.1em;
+}
+
+.tab p {
+font-size:0.8em;
+    font-weight: bold;
+    overflow: hidden;
+    max-width: 0;
+}
+.tab.active p {
+    margin-left: 10px;
+    max-width: 250px;
+    transition: max-width 0.4s linear;
+}
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+.card {
+  width: 98%;
+  margin-top: 0%;
+  margin-left: 1%;
+  height: 50%;
+  text-align: center;
+  border-radius: 2px;
+  margin-bottom: 10px;
+}
+.card a {
+  cursor: none;
+}
+.column2 {
+  float: left;
+  width: 25%;
+height: auto;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  padding: 0px;
+}
+@media screen and (max-width: 650px) {
+  .column2 {
+    display: block;
+  }
+}
+.card2 {
+  border-radius: 0px;
+  margin: 0px;
+  text-align: center;
+  background-color: #fff;
+  border: 0.5px solid #ff000000;
+  transition: 0.5s;
+  height: auto;
+  overflow: hidden;
+}
+.container {
+  padding: 0 0px;
+}
+.row {
+  margin-left: 3px;
+  margin-right: 3px;
+  margin: 0%;
+margin-top:36.8%;
+padding:11px;
+}
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+.title2 {
+  color: black;
+  font-size: 14px;
+  text-align: center;
+  margin-top: 5.5%;
+}
+.rounded-image3 {
+    border-radius: 50px;
+    margin-bottom: 0px;
+    margin-top: 15%;
+    width: 58%;  
+    padding:6px;
+}
+ .item-nearby-row { 
+float: left;  
+border-radius: 9px; 
+background: #ff000000; 
+width: 0%; 
+height: auto; 
+margin-left: 1.2% !important; 
+margin-right: 3px !important; 
+margin-top: 0px !important; 
+margin-bottom: 0px !important; justify-content: center; 
+align-items: center;  
+display: flex; flex-direction: column; 
+min-width: 50px; max-width: 6.8%; 
+overflow: hidden;  font-family: arial ;
+text-decoration: none;  -webkit-tap-highlight-color: transparent; transition: background-color 0.1s ease-in-out; 
+padding:0px;
+z-index:999;
+ } 
+.item-nearby-link {width: 100%; text-decoration: none; color: black; 
+}
+.item-nearby-image {width: 100% ! important; 
+border-radius: 13px 13px 13px 13px;
+ margin: 0px !important; 
+}
+.item-nearby-distance {  
+margin-left: 4px;
+margin-top:9px; 
+color:white;
+padding-left:4px;
+width:50% !important;
+background:var(--AchsinulUmamB2) !important;
+display: block; 
+font-size: 13px !important; 
+border-radius:9px;
+}
+.item-nearby-title {
+white-space: nowrap;
+font-weight: 450;
+ margin-top: 5px; 
+margin-left: 5px; 
+font-family:'Arial', sans-serif;
+display: block;
+  font-size: 90px;
+color:black;
+}
+.item-nearby-status {  margin-bottom: 5px; margin-left: 5px;  
+color: white; 
+font-weight: bold;
+ font-size: 13px !important; 
+}
+.item-nearby-status-note {
+margin-top: -100%; float: right;
+ margin-right: 5px; 
+margin-left: 0%;
+ border-radius:  5px; 
+opacity: 95%;
+ height: auto; width: 100%;
+ background:rgb(146 151 179 / 33%);
+backdrop-filter: blur(20px);
+ color: white;
+ font-size: 10px;
+ display: inline-block;  
+align-items: center;
+ justify-content: center; 
+ overflow: hidden; 
+  font-weight: 550;
+  text-align: center;
+  top: 0; 
+ }
+.item-nearby-status-open { 
+position: absolute;
+margin-bottom: 0px;
+margin-left:-12px;
+background-image: url(https://lh3.googleusercontent.com/u/0/d/1i0ZsFP2kcPGjcNFHZDWa4AP83VM_GxzW);
+background-size: cover;
+width:28.5%;
+height:21.5%;
+text-align:center;
+margin-top:-184px;
+ color:white;
+ font-size: 14px !important;
+font-family:'Arial';
+line-height:32px;
+}
+.card1::before{
+    content: '';
+    position: absolute;
+    top: 20px;
+    width: 6px;
+    height: 10px;
+    background: #910E13;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    z-index: 1;
+    left: 0.5%;
+}
+p,button1{
+    font-family: "Arial",sans-serif;
+    font-size: 10px;
+}
+button1{
+position: absolute;
+    background-color: var(--AchsinulUmamB2);
+    border: none;
+    color: #006400;
+    margin: 10px 0 30px 0;
+    padding: 5px 20px;
+    border-radius: 9px;
+    outline: none;
+    cursor: pointer;
+margin-left:64%;
+margin-top:-39px;
+}
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Arial', sans-serif;
+}
+li {
+	list-style: none;
+}
+.mgicz {
+ width:14%;
+ float:left;
+ margin-left:0%;
+ margin-top:-5.5%;
+ border-radius: 0px; 
+ border:5px solid none;
+ padding:10px;
+}
+.txt {
+  margin-bottom:0%;
+  margin-top:0%;
+  color:#000;
+  font-size: 3.7vw;
+}
+.cardos {
+  height: auto;
+  text-align: left;
+  border-radius: 10px;
+  margin: 0%;
+  margin-bottom: 1%;
+  user-select: none;
+  width:94%;
+  margin-left: 2.5%;
+  background-color: #eee;
+}
+.headers {
+  width: 100%;
+  text-align: center;
+  border-radius: 0px 0px 50px 50px;
+  margin-bottom: -2%;
+  margin-top: -7%;
+}
+.status {
+  margin: 2%;
+  padding: 0%;
+  color: #000;
+  font-size: 3vw;
+}
+.saldo {
+  margin: 0%;
+  padding: 0%;
+  color: #000;
+  font-size: 100%;
+}
+.row4 a {
+  float: left;
+  display: block;
+  text-decoration: none;
+  cursor: none;
+}
+.logo-header{width:110px!important;position:fixed;top:1px !important;left:14px;z-index:2;padding:6px;background:#ff000000!important;border-radius:0 !important;}
+</style>
+</head>
+<body>
+<div id="output-tab">
+  <div class="output-tab" id="home">
+    <div id="kotak-header"></div>
+    <div id="lapisan-header"></div>
+    <img class="logo-header" src="https://lh3.googleusercontent.com/u/0/d/19BSjAJjrH40x4pjSxdv2iWYe1gLZTDjm">
+    <a href="https://jgjk.mobi/act/admin">
+      <h11 style="position:fixed;width:16px;height:16px;display:flex;background:#EE2737;border-radius:50%;font-size:8px;align-items:center; color:white;font-weight: 550;padding:6px; right:15px;z-index:11111; margin-top:16">{jumlah_pesan}</h11>
+	<i class="fi fi-rs-bell "style="font-size:20px;color:#1C1C1C;position:fixed;top:24px;right:20px;z-index:1">
+	</i>
+</a>
+<a href="https://jgjk.mobi/act/shopping">
+<i class="fi fi-rr-assept-document" style="font-size:20px;color:#1C1C1C;position:fixed;top:24px;right:57px;z-index:1">
+	</i>
+</a>
+
+<a href="https://jgjk.mobi/act/search/">
+	<i class="fi fi-rr-search" style="font-size:20px;color:#1C1C1C;position:fixed;top:24px;right:93px;z-index:1">
+	</i>
+</a>
+
+
+<!--NAV SALDO-->
+<style>
+
+#navbarsaldo a{width:33.3% !important;margin-top:6px !important;}
+.nama-pengguna,.nama-penggunaa{height:5;padding:1px 1px !important;background-color:#ff000000;left:1% !important;border-radius:10px;box-shadow:0 0 0 #fff;font-family:Arial;z-index:2000 !important;width:auto;color:#fff !important;position:relative !important}.nama-pengguna{font-weight:700;font-size:15px;top:-32px !important;}.nama-penggunaa{font-weight:480;font-size:11px;top:-15px !important;}
+</style>
+<div id="navbarsaldo">
+<div class="nama-pengguna">
+	IDR {saldo}
+</div>
+ <div class="nama-penggunaa">
+	Go-US Pay
+</div>
+	<center>
+		<a href="action://act/balance">
+			<img src="https://lh3.googleusercontent.com/u/0/d/1iSxpOhOrHXCfKssjuaBvvTRPG7NzFX-6" style="width:28px"></i><br><p1 style="color:#fff;font-size:14px;font-family:'Arial';">Payment</a>
+
+		<a href="https://jgjk.mobi/act/topup">
+			<img src="https://lh3.googleusercontent.com/u/0/d/1yhgXdgEOOZxsfIiR56H_Lb_ld-8Wf23Y" style="width:28px"></i><br><p1 style="color:#fff;font-size:14px;font-family:'Arial';">Topup</a>
+			
+		<a href="https://jgjk.mobi/act/withdraw">
+	<img src="https://lh3.googleusercontent.com/u/0/d/1ISN0VCZW4o6e_xbUATNZFrX4--9Kb97j" style="width:28px"></i><br><p1 style="color:#fff;font-size:14px;font-family:'Arial'">Tarik Saldo</a>
+
+		<a href="#" style="display:none">
+			<img src="https://lh3.googleusercontent.com/u/0/d/18Qo_zNU9bLAP5Ai75Rx3PJiQAeGQQNzI" style="width:28px;padding:3px;"></i><br><p1 style="color:#fff;font-size:14px;font-family:'Arial'">Transfer</a>
+	
+	</center>	
+</div>
+
+<div class="achsinfont1" style="float:left;color:#1C1C1C;margin-left:25px;margin-top:110px;
+font-size:19px;text-shadow:var(--box-shadow);
+font-weight: 500;font-family:'Arial';">Services categories</div>
+<div class="row">
+  <div class="column2">
+    <a
+href="https://jgjk.mobi/m/5cec309103e66" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img style="background:var(--gradient1);padding:2px;"class="rounded-image3" src="https://lh3.googleusercontent.com/u/0/d/136DU4OV13t8M8YUXFipXCuUXFgJqUqBp"alt="">
+      <div class="container">
+        <p class="title2">Ride</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2" style="display:none ">
+  	 <a
+href="action://p/66ab838e630f4" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" class="btn btn-danger btn-sm" style="background:var(--gradient4);padding:4px; " src="https://lh3.googleusercontent.com/u/0/d/11fUFoRelagkIVCDuj0gCHWiGMKNNRUY1" alt="">
+      <div class="container">
+        <p class="title2">Car</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2">
+  		<a
+href="https://jgjk.mobi/m/5cec31c717827" style="text-decoration:none" target="_blank">
+<h11 style="position:absolute;width:36px;height:15px;line-height:5px;background:#DF1995;border-radius:10px;font-size:12; color:white; margin-top:12px;font-weight: 600; text-align: center;margin-left:39px;padding:5px;">Hot</h11>
+    <div class="card2">
+      <img class="rounded-image3"style="background:var(--gradient2);padding:5px; " src="https://lh3.googleusercontent.com/u/0/d/1QpwxdV9iLPpq-mgAGEEA-gAAEG4Xs7r3" alt="">
+      <div class="container">
+        <p class="title2">Food</p>
+      </div>
+    </div></a>
+  </div>
+ 
+  <div class="column2">
+    <a
+href="https://jgjk.mobi/m/5cec343835f64" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="background:var(--gradient1);padding:2px;" src="https://lh3.googleusercontent.com/u/0/d/10D3LlGQrtMnE1u9t5y5GNN2b9fdMJJKa" alt="">
+      <div class="container">
+     <p class="title2">Send</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2">
+  	 <a
+href="https://jgjk.mobi/m/5cec331da1f9b" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="background:var(--gradient3); padding:2px;" src="https://lh3.googleusercontent.com/u/0/d/11_UQOiEnNU_kC7WHfK1xuoGI-yIDZ0Av"alt="">
+      <div class="container">
+        <p class="title2">Mart</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2">
+  	 <a
+href="https://jgjk.mobi/m/5cec34d5aed8d" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="background:var(--gradient2);padding:4px;" src="https://lh3.googleusercontent.com/u/0/d/1yzIdKFol5WOgo-SyL2cpkCqG7SjybXKV" alt="">
+      <div class="container">
+        <p class="title2">Print</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2" style="display:none">
+  	 <a
+href="https://jgjk.mobi/m/66ab8428a10b6" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="background:var(--gradient4);padding:4px;" src="https://lh3.googleusercontent.com/u/0/d/11OzXDxQl24tgaUFkq_mHCBQDmUq0D6tR" alt="">
+      <div class="container">
+        <p class="title2">Pulsa</p>
+      </div>
+    </div></a>
+  </div>
+
+  <div class="column2">
+  	 <a
+href="https://jgjk.mobi/m/668d5c6249e0f" style="text-decoration:none" target="_blank">
+    <div class="card2">
+      <img class="rounded-image3" style="padding:9px" src="https://github.com/gous001/gous/blob/main/menu%20lainnya.png?raw=true" alt="">
+      <div class="container">
+        <p class="title2">Lainnya</p>
+      </div>
+    </div></a>
+  </div>
+</div>
+    
+    <div class="achsinfont1" style="float:left;color:#1C1C1C;margin-left:25px;margin-top:0px;font-size:19px;text-shadow:var(--box-shadow);font-weight: 500;font-family:'Arial';">Recommend for you</div>
+    
+    <!-- recommend-->
+    <a href="https://jgjk.mobi/m/5cec31c717827">
+    <div class='box' style="z-index:5;display:inline-block; margin-top:19px;width:90.5%;height:auto;margin-right:10px;margin-left:17px;">
+      <img style='width:100%;background:var(--AchsinulUmamB2); border-radius:15px 15px 15px 15px;' src='https://lh3.googleusercontent.com/u/0/d/1G085ckWiCHw6Y4oPFugv7EnlLUv6Xqr0'></div>
+       </a>
+       
+       <div class="achsinfont1" style="float:left;color:#1C1C1C;margin-left:25px;margin-top:20px;font-size:19px;text-shadow:var(--box-shadow);font-weight: 500;font-family:'Arial';">Top categories</div>
+       <div class="texttittle9" style="margin-left:25px; margin-right:15px;font-size:14px;font-family: 'Arial', sans-serif; margin-top:49px;color:var(--black); ">Pilih tempat makan terdekat, agar pesananmu lebih cepat sampai. </div>
+       <hr style="margin-left:24px;width:89%;border:1px solid #ebecf0;box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;margin-top:9px;"></hr>
+       
+       <div class="separatori" style="clear: both; "> 
+       <div class="w3-animate-left"  style=" overflow: auto;height: auto;  margin-bottom: 10px; border-radius: 0px 0px 0px 0px; ">  
+       <div style="background: none; height: 0%; overflow: value; width: 550%; margin-bottom: 10px;"><div class='productTerbaru'>{lokasi_terdekat}</div></div></div></div></div>
+
+
+
+  <div class="output-tab" id="likes">
+    <div id="kotak-header1"></div>
+    <a href="action://act/back">
+      <div class="nama-pengguna1">
+        Gabung jadi Mitra Go-US
+        </div>
+        </a>
+        <br>
+        
+        <center>
+        <div id='scrrolly33'>
+          <div class='box' style="z-index:1;display:inline-block;width:28%;height:102px;margin-right:9px;margin-left:6px;border-bottom:.0px solid Gainsboro;border-radius:10px;padding-bottom:0px;background:#ff000000;box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);">
+            <div class="card1">
+              <p style="font-size:10px;margin-top:-1px;font-weight:500;">Balance:</p>
+              </div>
+              <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;"><h style="font-size:14px;font-weight: 700;color:#000; margin-left:0px;white-space: nowrap;">{saldo}</h><br>
+              <p1 style="font-size:10px;top:5px;color:black; font-weight:450;margin-left:0px;">Total saldo kamu saat ini</p1>
+              <hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #F56F23;"></hr>
+              </div>
+              </div>
+              
+        <a href="#">
+        <div class='box' style="z-index:1;display:inline-block;width:28%;height:102;margin-right:9px;margin-left:7px;border-bottom:.5px solid Gainsboro;border-radius:10px;padding-bottom:1px;background:#ff000000;box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);">
+          <div class="card1">
+          <p style="font-size:10px;margin-top:-1px;font-weight:500">Voucher:</p>
+          </div>
+          <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;">
+            <h style="font-size:14px;font-weight: 700;color:#000;margin-left:3px;">0</h><br>
+            <p1 style="font-size:10px;color:black; font-weight:450;top:5px;">Gunakan Vouchermu</p1>
+            <hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #DE1895;">
+            </hr>
+            </div>
+            </div>
+            </a>
+            
+        <a href="action://act/customer_points">
+          <div class='box' style="z-index:1;display:inline-block;width:28%;height:102;margin-right:9px;margin-left:7px;border-bottom:.5px solid Gainsboro;border-radius:10px;padding-bottom:1px;background:#ff000000;box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);">
+            <div class="card1">
+              <p style="font-size:11px;margin-top:-1px;font-weight:500;">Point:</p1>
+              </div>
+           <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;margin-top:11px;white-space: normal;padding:5px;text-align:Left;"><h style="font-size:14px;font-weight: 700;color:#000;margin-left:3px;">{poin}</h><br>
+           <p1 style="font-size:10px;font-weight:450;color:#000;top:5px;">Tukar point sekarang</p1>
+           <hr style="border-radius:11%;margin-top:6px;width:89%;border:2px solid #01ADD5;"></hr>
+           </div> 
+           </div>
+           </a>
+           </center>
+
+<!--TABEL VERIFIKASI EMAIL-->
+  <br>
+    <div class="alertt">
+      <img src="https://lh3.googleusercontent.com/u/0/d/1-kc8s0y1wf7wjGf4EF4kWLPzzkUYKe7U" alt="Avatar" class="image33587" style="width: 22.5%; margin-right: 7px; margin-top: -18px; margin-left:-14px;border: px solid yellow; border-radius: 0%;box-shadow: 0 0px 0px 0 rgba(0,0,0,0.2); float:left;"> 
+      <div class="h255">Verifikasi Emailmu :{verifikasi_email}</div>
+      <div class="h355">Agar dapat melakukan Transaksi.</div>
+      <a href="action://act/verified_email">
+        <button12366>Lanjut</button12366>
+      </a>
+      </div>
+      
+      <div class="achsinfont1" style="float:left;color:#1C1C1C;margin-left:25px;margin-top:-7px;font-size:19px;text-shadow:var(--box-shadow);font-weight: 500;font-family:'Arial';">Tutor dapat Cuan di GO-US...!!!</div>
+      <div class="texttittle9" style="margin-left:25px; margin-right:15px;font-size:14px;font-family: 'Arial', sans-serif; margin-top:58px;color:var(--black); ">Dapatkan penghasilan lebih dengan bergabung bersama Go-US. </div>
+      
+      <hr style="margin-left:24px;width:89%;border:1px solid #ebecf0;box-shadow: -5px -5px 10px #fff, 5px 5px 10px #babebc;margin-top:9px;"></hr>
+        
+<!--BOX GABUNG MITRA-->
+      <a href="https://jgjk.mobi/m/668d5a1056ff5">
+      <img style='position:relative;width:90%; left:19px;top:10px;z-index:0;border-radius:15px 15px 15px 15px;' src="https://lh3.googleusercontent.com/u/0/d/1bKeaeFfs61wDZBBNuZYbmLzURCW0bEnP">
+       </a>
+       <br>
+
+<!--BOX GABUNG DRIVER-->
+      <a href="https://jgjk.mobi/m/668d5b2c51c28">
+      <img style='position:relative;width:90%; left:19px;top:50px;z-index:0;border-radius:15px 15px 15px 15px;' src='https://lh3.googleusercontent.com/u/0/d/1ghbyy1dP0rMZTIVfJ17Kf0uEvE5Sp92g'>
+       </a>
+       
+      
+      
+      <div style=" display:none;z-index:0;height:0%; margin-left:17px" id="berita" class="tabcontentt">
+        <a href="#">
+       <div class='box' style="z-index:5;display:inline-block;width:94.1%;height:auto;margin-right:0px;margin-left:1px;margin-top:8px;  box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);border-radius:19px;padding-bottom:1px;">
+         <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:var(--gradient5);' src='https://lh3.googleusercontent.com/u/0/d/1AvzG8rTrlOg8Px75hLH0W1YQWff7UaTh'>
+         <div class="card22"></div>
+       </a>
+       <div style="border-top: 2px dashed #000;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;">
+         <h style="font-size:16px;color:#000;font-weight: 450">DISKON 50% Ongkir Food <br>(Minimum. Rp8.000) </h>
+         <br>
+         <p style="font-size:15px; color:grey; margin-left:2px;">
+           <i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text2">Ongkir50</i>
+           </p>
+           <button1 onclick="copy('text2')">copy</button1>
+           </div>
+           </div>
+           <br>
+           <br>
+           
+        <a href="#">
+       <div class='box' style="z-index:5;display:inline-block;width:94.1%;height:auto;margin-right:0px;margin-left:1px;margin-top:8px;  box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);border-radius:19px;padding-bottom:1px;">
+         <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:var(--gradient5);' src='https://lh3.googleusercontent.com/u/0/d/1MTHZ25_hwW5-NYWE-p7br_iOP3e1Qtij'>
+         <div class="card22"></div>
+       </a>
+       <div style="border-top: 2px dashed #000;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;">
+         <h style="font-size:16px;color:#000;font-weight: 450">DISKON 10% Transportasi <br>(Maks. Rp27.000) </h>
+         <br>
+         <p style="font-size:15px; color:grey; margin-left:2px;">
+           <i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text3">Transportasi10</i>
+           </p>
+           <button1 onclick="copy('text3')">copy</button1>
+           </div>
+           </div>
+           <br>
+           <br>
+           
+      <a href="#">
+        <div class='box' style="z-index:5;display:inline-block;width:94.1%;height:auto;margin-right:0px;margin-left:1px;margin-bottom:80px;margin-top:10px;  box-shadow: 1px 2px 9px 0px rgba(0, 0, 0, 0.1);border-radius:19px;padding-bottom:1px;">
+          <img style='width:100%;border-top-left-radius: 19px;border-top-right-radius: 19px;background:var(--gradient5);' src='https://lh3.googleusercontent.com/u/0/d/1djiI6df_88_rjOv9i3mkOVVO24pgan9N'>
+          <div class="card22"></div>
+          </a>
+          <div style="border-top: 2px dashed #000;border-bottom-left-radius: 13px;border-bottom-right-radius: 13px;color:#darkblack;white-space: normal;padding:15px;text-align:Left;">
+            <h style="font-size:16px;color:#000;font-weight: 450">DISKON 15% Ongkir<br>(Minimun. Rp30.000) </h>
+            <br>
+            <p style="font-size:15px; color:grey; margin-left:2px;">
+              <i class="bx bx-copy"style="font-size:14px;color:grey;margin-top:1%;left:1px;z-index:1" id="text1">Ongkir15%</i></p>
+              <button1 onclick="copy('text1')">Copy</button1>
+              </div>
+              </div>
+              </div>
+  <p id="alerttt">Text Copied!</p>
+              </div>
+              
+            
+              
+              
+       <div class="output-tab" id="search">
+        <div id="kotak-header2"></div>
+        <a href="action://act/back">
+          <div class="nama-pengguna2">Pesanan</div>
+          </a>
+          <div class="container123">
+            <ul class="tab1-menu">
+              <li class="active123" data-target="homee">
+                <img style="width:31px;" src="https://lh3.googleusercontent.com/u/0/d/1mdC5F4AjKeOAURGxpifB24o3aLZ-GEQS">Pesanan</li>
+                <li data-target="contact123">
+                  <img style="width:33px;" src="https://lh3.googleusercontent.com/u/0/d/1GqCxGiFBZTIghNtEuVy-ZtCD5dZdMaO8">Keranjang</li>
+                  
+                  <span class="line123"></span>
+                  </ul>
+                  <div class="contents">
+                    <div class="content123 active123" id="homee">
+                      <img style="margin-top:37%;" src="https://lh3.googleusercontent.com/u/0/d/1mpCvDcDN2QsWGIlNfsaV7EKiIS6ihdDP" alt="video" width="100%" height="auto">
+                      <div class="texttittle9" style="font-family:'Arial'; text-align:center;float: center;font-size:15px; margin-top:9%;color:black"> Klik selanjutnya untuk melihat orderan yang kamu pesan</div>
+                      <a href="https://jgjk.mobi/act/shopping" target="_blank"><center><button style="height: 44px; background:var(--AchsinulUmamB2);font-size: 17px; font-weight:440;border: 0px; width:100%;padding: 5px; color: white; border-radius: 10px;margin-top:65px;">Selanjutnya</button></center></a>
+                      </div>
+                      
+          <div class="content123" id="contact123">
+            <img style="margin-top:37%;" src="https://lh3.googleusercontent.com/u/0/d/1tbFLOOLilfKP_7RFHM1WiI_71sQ4o1E0" alt="video" width="100%" height="auto">
+            <div class="texttittle9" style="font-family:'Arial'; text-align:center;float: center;font-size:15px; margin-top:9%;color:black">Klik selengkapnya untuk melihat keranjang belanjamu</div>
+            <a href="https://jgjk.mobi/act/cart" target="_blank"><center><button style="height: 44px; background:var(--AchsinulUmamB2); font-size: 17px; font-weight:440;border: 0px; width:100%;padding: 5px; color: white; border-radius: 10px;margin-top:65px;">Selengkapnya</button></center></a>
+            </div>
+            </div>
+            </div>
+            </div>
+            
+            
+      <div class="output-tab" id="profile">
+        <div id="kotak-header3"></div>
+        <a href="action://act/back">
+          <div class="nama-pengguna3">Profile</div>
+          </a>
+          
+          <div style="position:relative;margin-top: 15%; margin-left: 2%; margin-right: 0%;  background: #ff000000; font-family: Arial; overflow: auto; height: auto; overflow: 80px; width: 93%; z-index:0;border-radius: 7px 7px 0px 0px;"> 
+          <div style="border-bottom-left-radius: 10px;border-bottom-right-radius: 10px;color:var(--dark);margin-top:-10px;padding:5px;text-align:Left;">
+            <a href="action://act/profile">
+              <img src="{foto}"style="width:48px; position:relative; padding:1px;border-radius:50%;margin-top:34px;left:5px;z-index:1;">
+              </a>
+              <h style="position:relative;font-size:17px;font-weight: bold; color:#000;margin-left:15px;top:8px;">{nama} </h>
+              <br>
+              <p1 style="opacity:.7;font-size:15px;color:#000; position:relative;margin-left:65px; top:-16px;white-space: nowrap;">{hp}</p1>
+              <br>
+              <p2 style="opacity:.7;font-size:13px; position:relative;margin-left:65px; top:-20px;white-space: nowrap;">{email}</p2>
+              <a href="action://act/profile">
+                <img src="https://lh3.googleusercontent.com/u/0/d/1ox31psXYdCv2q3lEbo-ipeqnXg2Ajf8h"style="width:25px;float:right; border-radius:50px;position: relative;top:-71px;right:13px;z-index:10006">
+                </i>
+                </a>
+                </div>
+                </div>
+                <hr style="margin-left:35px;margin-top:-8px;width:85%;border:1px solid #fff;">
+                </hr>
+                <h style="float:left;font-size:19px;margin-top:-13px;font-weight: 500; margin-left:16px;color:#1C1C1C;">Account</h>
+                
+     <!----ISI AKUN---->
+      <div class="row4" style="margin-top:3%;padding:7px;width:100%;overflow:auto;">
+        <a style="text-decoration:none;" href="action://act/message_list">
+          <div class="cardos" style="padding:16px;">
+            <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1OFxqhOjglRiSismq75eEpx3_cgYXnM3h" alt="">
+            <p class="txt">Inbox</p>
+            </div>
+            </a>
+            
+            <a style="text-decoration:none;" href="action://act/balance">
+              <div class="cardos" style="padding:16px;">
+                <img class="mgicz"  src="https://lh3.googleusercontent.com/u/0/d/125s9zu_ihCvJR_Z6lZ-jLCAirAiFOQnJ" alt="">
+                <p class="txt">Balance: {saldo}</p>
+                </div>
+                </a>
+                <br>
+                
+                <h style="float:left;font-size:19px;margin-top:23px;font-weight: 500; margin-left:16px;color:#1C1C1C;margin-bottom:8px;">Info lainnya</h>
+                
+                <a style="text-decoration:none;" href="action://act/referral_list">
+                  <div class="cardos" style="padding:16px;">
+                    <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1oo5tbWW6Fgw_wfeiQxOZutdlGhZHoGR9" alt="">
+                    <p class="txt">Daftar referral</p>
+                    </div>
+                    </a>
+                    
+                <a style="text-decoration:none;" href="https://api.whatsapp.com/send?phone=&text=Hallo%20kak%20%F0%9F%99%8B%E2%80%8D%E2%99%80%0Asaya%20*{nama}*%20ingin%20mengajak%20Anda%20untuk%20*Mendownload*%20Aplikasi%20ini%0A%0A*DOWNLOAD%20Sekarang%20dan%20dapatkan%20sharing%20profite*%20%F0%9F%91%87%F0%9F%91%87%F0%9F%91%87%0Ahttps%3A%2F%2Fplay.google.com%2Fstore%2Fapps%2Fdetails%3Fid%3Dcom.myIsikodenamaapk.Isikodenamaapk%0A%0AJangan%20lupa%20masukkan%20code%20ini%20*{username}*%20ketika%20Register%20Dan%20dapatkan%20Promo-promo%20menarik%20di%20dalamnya">
+                <div class="cardos" style="padding:16px;">
+                  <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1I6FQMEljk0m48PeGOgkZBUXUzKoMB9CJ" alt="">
+                  <p class="txt">Share referral</p>
+                  </div>
+                  </a>
+                  
+                  <a style="text-decoration:none;" href="https://jgjk.mobi/act/partner">
+                    <div class="cardos" style="padding:16px;">
+                      <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1neQH9-fSs3VvC-BXpz9jQpi8ZSDiz5CJ" alt="">
+                      <p class="txt">Fitur mitra jualan</p>
+                      </div>
+                      </a>
+                      
+          <a style="text-decoration:none;" href="https://jgjk.mobi/act/driver">
+            <div class="cardos" style="padding:16px;">
+              <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1xHEIblg_2Y8i1W-y4X_zRwxanSvFKN6C" alt="">
+              <p class="txt">Fitur driver atau kurir</p>
+              </div>
+              </a>
+              
+              <a style="text-decoration:none;" href="action://act/password">
+                <div class="cardos" style="padding:16px;">
+                  <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1Vu4yCaGtXwWKC1ZxtPNtZ2fvgcpeFKPr" alt="">
+                  <p class="txt">Pengaturan password</p>
+                  </div>
+                  </a>
+                  </div>
+                  
+                  <div class="row4" style="margin-top:3%;padding:7px;width:100%;overflow:hidden;">
+                    <a style="text-decoration:none;" href="action://act/logout">
+                      <div class="cardos" style="padding:16px;">
+                        <img class="mgicz" src="https://lh3.googleusercontent.com/u/0/d/1bbyaqr73gHeUW55F-QCukaOlKKFz_rFv" alt="">
+                    <p class="txt">Logout</p>
+                    </div>
+                    </a>
+                    </div>
+                    </div>
+                    </div>
+                    
+         <div class="tab-nav-container">
+           <div class="tab purple" data-id="home">
+             <i class="fi fi-rr-home"></i>
+             <p>Beranda</p>
+             </div>
+             <div class="tab pink" data-id="likes">
+               <i class="fi fi-rr-receipt"></i>
+               <p>Panduan</p>
+               </div>
+               <div class="tab yellow" data-id="search" >
+                 <i class="fi fi-rr-clipboard-list"></i>
+                 <p>Pesanan</p>
+                 </div>
+                 <div class="tab teal" data-id="profile">
+                   <i class="far fa-user"></i>
+              <p>Account</p>
+              </div>
+            </div>
+            <script src="https://ahsinulumam.github.io/Firdaus.js"></script>
+          </body>
+         </html>
